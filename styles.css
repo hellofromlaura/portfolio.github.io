@@ -1,0 +1,247 @@
+.kode-mono-normal {
+    font-family: "Kode Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+html {
+    font-family: "Kode Mono";
+    background-color: #0F1044;
+    overflow: hidden;
+    height: 100%;
+}
+body {
+    margin: 0px;
+    height: 100%;
+    overflow: auto;
+}
+section {
+    height: 100vh;
+    overflow: hidden;
+}
+h1 {
+    color: #E0BADC;
+    font-size: 3em;
+}
+h2 {
+    color: #E0BADC;
+    font-size: 2em;
+}
+h3 {
+    color: #E0BADC;
+}
+p {
+    color: #FFF;
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+a {
+    color: #C7895C;
+    position: relative;
+    text-decoration: none;
+    z-index: 1;
+}
+img {
+    max-width: 100%;
+}
+svg {
+    width: 350px;
+    height: 350px;
+}
+nav {
+    padding: 35px; 
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    background-color: #E0BADC;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+nav div {
+    max-width: 1800px;
+    margin: auto;
+}
+nav ul {
+    margin: 0px;
+    padding: 0 80px;
+    display: flex;
+    gap: 10px;
+    list-style-type: none;
+}
+nav a {
+    padding: 20px;
+    color: #0F1044;
+    font-weight: 900;
+    text-decoration: none;
+    outline: 0;
+}
+nav a.active {
+    background-color: #0F1044;
+    color: #C7895C;
+}
+nav a:hover {
+    color: #C7895C;
+}
+nav a:focus {
+    outline: 0;
+}
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-image: linear-gradient(0deg, rgba(15,16,68,1) 0%, rgba(224,186,220,1) 80%);
+}
+#hero h1 {
+    position: absolute;
+    top: 37%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10em;
+    color: #0F1044;
+    text-shadow: -1px -1px 0 #E0BADC, 1px -1px 0 #E0BADC, -1px 1px 0 #E0BADC, 1px 1px 0 #E0BADC, 1px 0px 0px #5A4471, 0px 1px 0px #5A4471, 2px 1px 0px #5A4471, 1px 2px 0px #5A4471, 3px 2px 0px #5A4471, 2px 3px 0px #5A4471, 4px 3px 0px #5A4471, 3px 4px 0px #5A4471, 5px 4px 0px #5A4471, 3px 5px 0px #E0BADC, 6px 5px 0px #E0BADC, -1px 2px 0 black, 0 3px 0 #E0BADC, 1px 4px 0 #E0BADC, 2px 5px 0px #E0BADC, 2px -1px 0 #E0BADC, 3px 0 0 #E0BADC, 4px 1px 0 #E0BADC, 5px 2px 0px #E0BADC, 6px 3px 0 #E0BADC, 7px 4px 0 #E0BADC, 10px 10px 4px #E0BADC;
+}
+#about {
+    display: flex;
+    width: 80%;
+    max-width: 1000px;
+    margin: auto;
+    align-items: center;
+}
+#portfolio {
+    width: 80%;
+    max-width: 1000px;
+    margin: auto;
+}
+.works {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 80px;
+}
+.work {
+    display: flex;
+    justify-content: center;
+    column-gap: 30px;
+}
+.work-links {
+    display: flex;
+    gap: 30px;
+}
+.work-links a::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: -0.25em;
+    right: -0.25em;
+    background-color: #E0BADC;
+    transform-origin: bottom center;
+    transform: scaleY(0.1);
+    transition: all 0.1s ease-in-out;
+}
+.work-links a:hover::before {
+    transform: scaleY(1);
+    background-color: #E0BADC;
+}
+.right {
+    width: 40%;
+}
+.left {
+    width: 70%;
+}
+.work h2 {
+    margin-top: 0px;
+}
+.work p {
+    font-size: 1.2em;
+}
+.work-img {
+    height: 350px;
+    object-fit: cover;
+    object-position: top;
+}
+.tags {
+    display: flex;
+    gap: 10px;
+}
+.footer {
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(0deg, rgba(224,186,220,1) 0%,rgba(15,16,68,1) 80%);
+}
+.footer p {
+    font-size: 1em;
+    padding: 50px 0 30px 0;
+}
+
+@media screen and (max-width: 1200px) {
+    h1 {
+        font-size: 2.5em;
+    }
+    p {
+        font-size: 1.3em;
+    }
+    nav ul {
+        padding: 0;
+    }
+    #hero h1 {
+        font-size: 8em;
+    }
+    #hero img {
+        max-width: 90%;
+        display: block;
+        margin: auto;
+    }
+    #about {
+        height: auto;
+        width: 65%;
+        margin: 100px auto;
+    }
+}
+@media screen and (max-width: 900px) {
+    nav {
+        padding: 35px 20px;
+    }
+    h1 {
+        text-align: center;
+    }
+    p {
+        font-size: 1.1em;
+        text-align: center;
+    }
+    svg {
+        width: 300px;
+        margin: auto;
+    }
+    #hero h1 {
+        font-size: 4em;
+        top: 43.5%;
+        text-align: center;
+    }
+    #about {
+        width: 75%;
+        margin: 50px auto 100px;
+    }
+    #portfolio {
+        margin: 0 auto 100px;
+    }
+    .work {
+        flex-direction: column-reverse;
+    }
+    .work h2 {
+        font-size: 1.5em;
+        text-align: center;
+    }
+    .work p {
+        font-size: 1em;
+    }
+    .tags,
+    .work-links {
+        justify-content: center;
+    }
+    .left {
+        width: 100%;
+    }
+}
